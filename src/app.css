@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideOut {
+  from { opacity: 1; transform: translateX(0); }
+  to { opacity: 0; transform: translateX(100%); }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.slide-out {
+  animation: slideOut 0.3s ease-in forwards;
+}
+
+/* Dark Mode */
+.dark {
+  background-color: #1a202c;
+  color: #e2e8f0;
+}
+
+.dark .bg-white {
+  background-color: #2d3748;
+}
+
+.dark .bg-gray-50 {
+  background-color: #4a5568;
+}
+
+.dark .text-gray-400 {
+  color: #a0aec0;
+}
+
+.dark .border-gray-300 {
+  border-color: #4a5568;
+}
+
+.dark input:focus {
+  outline: 2px solid #63b3ed;
+  outline-offset: 2px;
+}
